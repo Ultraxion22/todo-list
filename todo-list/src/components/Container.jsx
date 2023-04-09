@@ -4,17 +4,13 @@ import Form from './Form';
 import List from './List';
 
 function Container() {
-    const [list, setList] = useState([]); // (B-1)
-
-  // (A-2)
+    const [list, setList] = useState([]);
   const handleAddItem = addItem => {
-    setList([...list, addItem]); // (B-2)
+    setList([...list, addItem]);
   };
   return (
     <div>
-      {/*(A-1)*/}
       <Form handleAddItem={handleAddItem} />
-      {/*(C)*/}
       <List list={list} setList={setList} />
     </div>
   );

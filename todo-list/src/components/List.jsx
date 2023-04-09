@@ -6,30 +6,22 @@ function List(props) {
 
   const onChangeStatus = e => {
     const { name, checked } = e.target;
-
-    // (E)
     const updateList = list.map(item => ({
       ...item,
       done: item.id === name ? checked : item.done
     }));
     setList(updateList);
   };
-
-  // (D)
   const onClickRemoveItem = e => {
     const updateList = list.filter(item => !item.done);
     setList(updateList);
   };
-
-  // (A-2)
   const chk = list.map(item => (
     <CheckBox key={item.id} data={item} onChange={onChangeStatus} />
   ));
   return (
     <div className="todo-list">
-      {/*(A-1)*/}
       {list.length ? chk : "No tasks"}
-      {/*(B)*/}
       {list.length ? (
         <p>
           <button className="button blue" onClick={onClickRemoveItem}>

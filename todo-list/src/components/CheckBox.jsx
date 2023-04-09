@@ -7,7 +7,6 @@ function CheckBox(props) {
       } = props;
       return (
         <Fragment>
-          {/* Just ADD !!!! */}
           <svg
             viewBox="0 0 0 0"
             style={{ position: "absolute", zIndex: -1, opacity: 0 }}
@@ -31,7 +30,6 @@ function CheckBox(props) {
               defaultChecked={done}
               onChange={onChange}
             />
-            {/* Just ADD !!!! */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
