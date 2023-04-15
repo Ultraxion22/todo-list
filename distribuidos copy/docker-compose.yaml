@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+    redis1:
+      build: ./redis/
+      restart: always
+    redis2:
+      build: ./redis/
+      restart: always
+    redis3:
+      build: ./redis/
+      restart: always
+    backend:
+      build: ./rest/
+      restart: always
+      ports:
+        - "3000:3000"
